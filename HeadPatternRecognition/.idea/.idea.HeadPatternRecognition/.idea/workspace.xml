@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arrow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arrow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExperimentEnv.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExperimentEnv.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/None.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/None.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/None.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/None.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Record.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Write.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Write.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Jpzz_Henry_2021-04-01.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Jpzz_Henry_2021-04-01.csv.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URPSetting/ExampleAssets/Materials/Paint1G_WAnim_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URPSetting/ExampleAssets/Materials/Paint1G_WAnim_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/arrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/marking.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/marking.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MarkingSection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LineGraph3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Read.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/03) Events/Scripts/EventsExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Scripts/OSCValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Record.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BarGraph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/02) Value Types/Scripts/ValueTypesExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/01) Getting Started/Scripts/SimpleMessageTransmitter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/01) Getting Started/Scripts/SimpleMessageReceiver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Write.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Scripts/OSCTransmitter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/SampleFramework/Usage/OVROverlayCanvas/Scripts/OVROverlayCanvas.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Receiver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Scripts/OSCReceiver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transmitter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/OscSimpl/Examples/04 Bundles/UsingBundles.cs" />
+      <option value="$PROJECT_DIR$/Assets/extOSC/Examples/02) Value Types/Scripts/ValueTypesExample.cs" />
+      <option value="$PROJECT_DIR$/Assets/OscSimpl/Examples/01 GettingStarted/GettingStartedReceiving.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Write.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Record.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Read.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1dOJUT9tBwKR2grXmw73w4vwQIS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="" />
+      <created>1592290221554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592290221554</updated>
+      <workItem from="1592290223129" duration="65000" />
+      <workItem from="1592290307061" duration="234000" />
+      <workItem from="1592292520434" duration="2764000" />
+      <workItem from="1592316364821" duration="1850000" />
+      <workItem from="1592368898257" duration="1031000" />
+      <workItem from="1592370055615" duration="13183000" />
+      <workItem from="1592399215455" duration="8625000" />
+      <workItem from="1592407931676" duration="3384000" />
+      <workItem from="1592468143412" duration="11305000" />
+      <workItem from="1592800722933" duration="12037000" />
+      <workItem from="1592813842273" duration="570000" />
+      <workItem from="1592814599011" duration="10074000" />
+      <workItem from="1592829456956" duration="1233000" />
+      <workItem from="1592902717862" duration="3000" />
+      <workItem from="1592917214119" duration="5836000" />
+      <workItem from="1592971373559" duration="2048000" />
+      <workItem from="1592974340267" duration="5359000" />
+      <workItem from="1592995137747" duration="401000" />
+      <workItem from="1592997646087" duration="1203000" />
+      <workItem from="1593145003028" duration="1613000" />
+      <workItem from="1593147527242" duration="2868000" />
+      <workItem from="1593168191579" duration="2345000" />
+      <workItem from="1593171450444" duration="1874000" />
+      <workItem from="1593173787562" duration="350000" />
+      <workItem from="1593174357562" duration="1738000" />
+      <workItem from="1593400419780" duration="557000" />
+      <workItem from="1593401039275" duration="25000" />
+      <workItem from="1593401209501" duration="8000" />
+      <workItem from="1593401467248" duration="81000" />
+      <workItem from="1593401822997" duration="1843000" />
+      <workItem from="1593403808285" duration="11000" />
+      <workItem from="1593405595638" duration="3000" />
+      <workItem from="1593432057368" duration="107000" />
+      <workItem from="1593432175643" duration="1051000" />
+      <workItem from="1593436974671" duration="343000" />
+      <workItem from="1593587507221" duration="1691000" />
+      <workItem from="1593613484827" duration="1424000" />
+      <workItem from="1593615164029" duration="204000" />
+      <workItem from="1593615739272" duration="232000" />
+      <workItem from="1593662265890" duration="97000" />
+      <workItem from="1593662683250" duration="562000" />
+      <workItem from="1593665482634" duration="1893000" />
+      <workItem from="1593667614644" duration="4739000" />
+      <workItem from="1593759827604" duration="3801000" />
+      <workItem from="1593766737443" duration="8000" />
+      <workItem from="1594009467036" duration="171000" />
+      <workItem from="1603448665261" duration="2040000" />
+      <workItem from="1610519398209" duration="11479000" />
+      <workItem from="1610945780512" duration="3492000" />
+      <workItem from="1617085576323" duration="11132000" />
+      <workItem from="1617177531975" duration="4631000" />
+      <workItem from="1617261333717" duration="2448000" />
+      <workItem from="1617287208109" duration="674000" />
+      <workItem from="1617287959986" duration="33000" />
+      <workItem from="1617288035795" duration="57000" />
+      <workItem from="1617288108871" duration="1902000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
