@@ -16,7 +16,7 @@ public class Record : MonoBehaviour
     }
     void Update()
     {
-        //CameraRecenter();
+        CameraRecenter();
         Reset();
     }
 
@@ -80,8 +80,6 @@ public class Record : MonoBehaviour
     [SerializeField] private bool isReset;
     [SerializeField] private bool isMark;
     [SerializeField] private bool isExport;
-   
-    
     //-------------------------------------------------------------------------------------------------
     /// <summary>
     /// Head Data
@@ -123,14 +121,10 @@ public class Record : MonoBehaviour
     /// <summary>
     /// Input Space key => OVR Camera recenter
     /// </summary>
-    private void CameraRecenter()
+    public void CameraRecenter()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || isCenter)
-        {
-            OVRManager.OVRRecenter();
-            isCenter = false;
-        }
-        
+        OVRManager.OVRRecenter();
+        isCenter = true;
     }
     /// <summary>
     /// Press Start Experiment Button
@@ -220,7 +214,7 @@ public class Record : MonoBehaviour
         else
             mark = 0;
         headTRData[7] = mark;
-        dataSet.Add(headTRData);
+        //dataSet.Add(headTRData);
             
         isMark = false;
         

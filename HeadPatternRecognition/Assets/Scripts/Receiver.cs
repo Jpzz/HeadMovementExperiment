@@ -36,8 +36,8 @@ public class Receiver : MonoBehaviour
     public void OnReceiveRecenterCamera(float value)
     {
         Debug.Log(value);
-        if(value == 1)
-            record.IsCenter = true;
+        if (value == 1)
+            record.CameraRecenter();
     }
 
     public void OnReceiveReset(float value)
@@ -62,7 +62,7 @@ public class Receiver : MonoBehaviour
         if (value == 1)
         {
             record.IsExport = true;
-            write.ExportCSV();
+            write.ExportTxt();
         }
     }
     
