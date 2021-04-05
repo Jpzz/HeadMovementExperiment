@@ -213,14 +213,19 @@ public class Record : MonoBehaviour
         headTRData[5] = zPos;
         headTRData[6] = recordedTime;
         
-        if (isMark)
-            mark = 1;
-        else
+        if (!isMark)
+        {
+           
             mark = 0;
+        }
+        else if(isMark)
+        {
+            isMark = false;
+            mark = 1;
+        }
         headTRData[7] = mark;
         //dataSet.Add(headTRData);
             
-        isMark = false;
         
         for (var i = 0; i < headTRData.Length; i++)
         {
@@ -253,7 +258,7 @@ public class Record : MonoBehaviour
 
     private void OculusInput()
     {
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger, controller))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller))
         {
             isStartExperiment = true;
             CameraRecenter();
@@ -261,7 +266,7 @@ public class Record : MonoBehaviour
             Debug.Log("START EXPERIMENT");
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger, controller))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, controller))
         {
             isMark = true;
             

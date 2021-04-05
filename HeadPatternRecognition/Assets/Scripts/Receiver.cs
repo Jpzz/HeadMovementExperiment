@@ -30,7 +30,10 @@ public class Receiver : MonoBehaviour
     {
         Debug.Log(value);
         if(value == 1)
+        {
             record.IsStartExperiment = true;
+            record.CameraRecenter();
+        }
     }
     
     public void OnReceiveRecenterCamera(float value)
