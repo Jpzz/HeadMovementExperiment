@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Record : MonoBehaviour
 {
@@ -37,7 +38,11 @@ public class Record : MonoBehaviour
 
     [Header("Data String")] public string dataStr;
     //-------------------------------------------------------------------------------------------------
-    public OVRInput.Controller controller;
+    [Header("Controller")] public OVRInput.Controller controller;
+
+    [Header("Experiment State")] public Text stateText;
+
+    [Header("Mark State")] public Text markText;
     //-------------------------------------------------------------------------------------------------
     /// <summary>
     /// IsCenter => Camera ReCenter, IsStartExperiment => Experiment Start, IsReset => Contents Reset, IsMarkStart => Marking, IsMarkEnd => Mark End
@@ -106,6 +111,7 @@ public class Record : MonoBehaviour
 
     private void Initialize()
     {
+        stateText.text = "STATE IDLE";
         recordedTime = -saveIntervalTime;
         tags = new[]
             {"XEuler", "YEuler", "ZEuler", "XPosition", "YPosition", "ZPosition", "Time", "Mark"};
@@ -160,6 +166,7 @@ public class Record : MonoBehaviour
         
         if (isCenter && isStartExperiment && !isExport)
         {
+            stateText.text = "State Start";
             UpdateHeadTransform();
         }
         yield return new WaitForSeconds(saveIntervalTime);
@@ -215,11 +222,12 @@ public class Record : MonoBehaviour
         
         if (!isMark)
         {
-           
+            markText.text = "Mark Off";
             mark = 0;
         }
         else if(isMark)
         {
+            markText.text = "Mark On";
             isMark = false;
             mark = 1;
         }

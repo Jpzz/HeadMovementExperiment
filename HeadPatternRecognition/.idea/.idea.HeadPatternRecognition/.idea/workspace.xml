@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Record.cs" afterDir="false" />
     </list>
@@ -177,7 +176,9 @@
       <workItem from="1617287959986" duration="33000" />
       <workItem from="1617288035795" duration="57000" />
       <workItem from="1617288108871" duration="1902000" />
-      <workItem from="1617592884384" duration="684000" />
+      <workItem from="1617592884384" duration="3087000" />
+      <workItem from="1617609537858" duration="1269000" />
+      <workItem from="1617613619109" duration="57000" />
     </task>
     <servers />
   </component>
