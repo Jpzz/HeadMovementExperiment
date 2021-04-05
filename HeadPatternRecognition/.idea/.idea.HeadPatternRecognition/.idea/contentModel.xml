@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Jpzz\AppData\local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Jpzz\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_HeadPatternRecognition.-72755184.00" t="ExcludeRecursive" />
-    <e p="D:\UNITY_PROJECT\HeadMovementRecogntion\HeadPatternRecognition" t="IncludeRecursive">
+    <e p="C:\Users\Jpzz\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_HeadPatternRecognition.1437026867.00" t="ExcludeRecursive" />
+    <e p="D:\UNITY_PROJECT\HeadMovementExperiment\HeadPatternRecognition" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">

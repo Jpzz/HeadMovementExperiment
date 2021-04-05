@@ -11,13 +11,17 @@ public class Record : MonoBehaviour
     
     private void Start()
     {
+        controller = OVRInput.Controller.RTouch;
         Initialize();
         StartCoroutine(CoRecord());
     }
     void Update()
     {
-        CameraRecenter();
+        //CameraRecenter();
         Reset();
+        
+        
+        OculusInput();
     }
 
     #endregion
@@ -33,7 +37,7 @@ public class Record : MonoBehaviour
 
     [Header("Data String")] public string dataStr;
     //-------------------------------------------------------------------------------------------------
-    
+    public OVRInput.Controller controller;
     //-------------------------------------------------------------------------------------------------
     /// <summary>
     /// IsCenter => Camera ReCenter, IsStartExperiment => Experiment Start, IsReset => Contents Reset, IsMarkStart => Marking, IsMarkEnd => Mark End
@@ -246,6 +250,22 @@ public class Record : MonoBehaviour
     }
     
     #endregion
-    
 
+    private void OculusInput()
+    {
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger, controller))
+        {
+            isStartExperiment = true;
+            CameraRecenter();
+            
+            Debug.Log("START EXPERIMENT");
+        }
+
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger, controller))
+        {
+            isMark = true;
+            
+            Debug.Log("MARK");
+        }
+    }
 }
