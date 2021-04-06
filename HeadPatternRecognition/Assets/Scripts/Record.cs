@@ -43,6 +43,9 @@ public class Record : MonoBehaviour
     [Header("Experiment State")] public Text stateText;
 
     [Header("Mark State")] public Text markText;
+    [Header("Rotation X")] public Text rotationXText;
+    [Header("Rotation Y")] public Text rotationYText;
+    [Header("Rotation Z")] public Text rotationZText;
     //-------------------------------------------------------------------------------------------------
     /// <summary>
     /// IsCenter => Camera ReCenter, IsStartExperiment => Experiment Start, IsReset => Contents Reset, IsMarkStart => Marking, IsMarkEnd => Mark End
@@ -233,8 +236,12 @@ public class Record : MonoBehaviour
         }
         headTRData[7] = mark;
         //dataSet.Add(headTRData);
-            
-        
+
+
+        rotationXText.text = headTRData[0].ToString();
+        rotationYText.text = headTRData[1].ToString();
+        rotationZText.text = headTRData[2].ToString();
+
         for (var i = 0; i < headTRData.Length; i++)
         {
             var temp = "," + headTRData[i];
