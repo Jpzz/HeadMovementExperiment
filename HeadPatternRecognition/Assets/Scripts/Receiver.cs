@@ -15,7 +15,7 @@ public class Receiver : MonoBehaviour
     public string resetAddress;
     public string markAddress;
     public string recenterAddress;
-    
+    public string sceneAddress;
     private void OnEnable()
     {        
         oscIn.MapFloat(exportAddress, OnReceiveExport);
@@ -23,6 +23,7 @@ public class Receiver : MonoBehaviour
         oscIn.MapFloat(recenterAddress, OnReceiveRecenterCamera);
         oscIn.MapFloat(markAddress, OnReceiveMark);
         oscIn.MapFloat(resetAddress, OnReceiveReset);
+        oscIn.MapFloat(sceneAddress, OnReceiveSceneTransition);
         oscIn.Open(7000);
     }
 
@@ -57,6 +58,13 @@ public class Receiver : MonoBehaviour
         if(value == 1)
             record.IsMark = true;
         //transmitter.Send(transmitter.Mark, value);
+    }
+
+    public void OnReceiveSceneTransition(float value)
+    {
+        Debug.Log(value);
+        if (value == 1)
+            record.IsTransition = true;
     }
 
     public void OnReceiveExport(float value)

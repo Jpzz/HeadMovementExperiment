@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Record.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,9 +53,9 @@
       <option value="$PROJECT_DIR$/Assets/extOSC/Examples/02) Value Types/Scripts/ValueTypesExample.cs" />
       <option value="$PROJECT_DIR$/Assets/OscSimpl/Examples/01 GettingStarted/GettingStartedReceiving.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Data.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Write.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Read.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Record.cs" />
     </changedPaths>
   </component>
@@ -179,7 +181,8 @@
       <workItem from="1617592884384" duration="3087000" />
       <workItem from="1617609537858" duration="1269000" />
       <workItem from="1617613619109" duration="57000" />
-      <workItem from="1617698349210" duration="86000" />
+      <workItem from="1617698349210" duration="1203000" />
+      <workItem from="1617769129958" duration="760000" />
     </task>
     <servers />
   </component>

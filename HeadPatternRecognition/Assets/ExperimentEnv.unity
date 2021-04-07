@@ -561,6 +561,7 @@ MonoBehaviour:
   isCenter: 0
   isReset: 0
   isMark: 0
+  isTransition: 0
   isExport: 0
 --- !u!114 &978563503
 MonoBehaviour:
@@ -1757,6 +1758,7 @@ MonoBehaviour:
   resetAddress: /reset
   markAddress: /mark
   recenterAddress: /recenter
+  sceneAddress: /scene
 --- !u!4 &2064165167
 Transform:
   m_ObjectHideFlags: 0

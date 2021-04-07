@@ -1176,8 +1176,11 @@
         </e>
         <e p="StreamingAssets" t="Include">
           <e p="HeadMovementData" t="Include">
+            <e p="GyungTae_Henry_2021-04-06.txt" t="Include" />
             <e p="Haemin_Henry_2021-04-05.txt" t="Include" />
+            <e p="Jungho_ArdensWake_2021-04-06.txt" t="Include" />
             <e p="Jungho_Henry_2021-04-05.txt" t="Include" />
+            <e p="Youngho_Henry_2021-04-06.txt" t="Include" />
           </e>
         </e>
         <e p="URPSetting" t="Include">

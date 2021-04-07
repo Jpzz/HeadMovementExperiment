@@ -77,6 +77,12 @@ public class Record : MonoBehaviour
         set => isExport = value;
     }
 
+    public bool IsTransition
+    {
+        get => isTransition;
+        set => isTransition = value;
+    }
+
     [Header("Head Data")] public List<float[]> dataSet = new List<float[]>();
 
     public string[] tags;
@@ -91,6 +97,7 @@ public class Record : MonoBehaviour
     [SerializeField] private bool isCenter;
     [SerializeField] private bool isReset;
     [SerializeField] private bool isMark;
+    [SerializeField] private bool isTransition;
     [SerializeField] private bool isExport;
     //-------------------------------------------------------------------------------------------------
     /// <summary>
@@ -222,18 +229,28 @@ public class Record : MonoBehaviour
         headTRData[4] = yPos;
         headTRData[5] = zPos;
         headTRData[6] = recordedTime;
-        
-        if (!isMark)
+
+        if (!IsTransition)
         {
-            markText.text = "Mark Off";
-            mark = 0;
+            if (!isMark)
+            {
+                markText.text = "None Cue";
+                mark = 0;
+            }
+            else if(isMark)
+            {
+                markText.text = "Marking Cue";
+                isMark = false;
+                mark = 1;
+            }
         }
-        else if(isMark)
+        else
         {
-            markText.text = "Mark On";
-            isMark = false;
-            mark = 1;
+            markText.text = "Transition Scene";
+            mark = 2;
+            IsTransition = false;
         }
+       
         headTRData[7] = mark;
         //dataSet.Add(headTRData);
 
