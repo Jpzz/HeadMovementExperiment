@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class Write : MonoBehaviour
 {
+   [Header("Read Text file name")] public string textFileName;
+   public bool IsConvertCSV;
+   
+   
    public string personName;
    public string animationName;
    public Record record;
@@ -20,9 +24,16 @@ public class Write : MonoBehaviour
       date = System.DateTime.Now.ToString("yyyy-MM-dd");
    }
 
+   private void Start()
+   {
+      if(IsConvertCSV)
+         ConvertCSV();
+   }
+
    public void ExportTxt()
    {
-      var filePath = GetPath(".txt");
+      var fileName = personName + "_" + animationName + "_" + date;
+      var filePath = DataUtility.GetPath(fileName,".txt");
       FileStream fileStream = new FileStream(filePath, FileMode.Create);
       StreamWriter streamWriter = new StreamWriter(fileStream);
       streamWriter.WriteLine(record.dataStr);
@@ -30,31 +41,34 @@ public class Write : MonoBehaviour
       streamWriter.Close();
       fileStream.Close();
    }
-   public void ExportCSV()
+   
+   private void ConvertCSV()
    {
-      Debug.Log("EXPORT");
-      var rowDataTemp = new string[8];
-      var dataSizes = record.dataSet.Count;
-      Debug.Log("DataSizes : "+dataSizes);
-      for (var i = 0; i < rowDataTemp.Length; i++)
+      Debug.Log("Convert Start");
+      var filePath = DataUtility.GetPath(textFileName,".txt");
+      StreamReader streamReader = new StreamReader(filePath);
+      var dataStr = streamReader.ReadToEnd();
+      streamReader.Close();
+
+      var splitStr = dataStr.Split(',');
+      Debug.Log(splitStr.Length);
+      var dataList = new List<string[]>();
+      for (var i = 0; i < splitStr.Length; i+=8)
       {
-         rowDataTemp[i] = record.tags[i];
+         var array = new string[8];
+         array[0] = splitStr[i];
+         array[1] = splitStr[i + 1];
+         array[2] = splitStr[i + 2];
+         array[3] = splitStr[i + 3];
+         array[4] = splitStr[i + 4];
+         array[5] = splitStr[i + 5];
+         array[6] = splitStr[i + 6];
+         array[7] = splitStr[i + 7];
+            
+         dataList.Add(array);
       }
-      
-      dataList.Add(rowDataTemp);
-      
-      for (var i = 0; i < dataSizes; i++)
-      {
-         var tempData = new string[8];
-         for (int j = 0; j < 8; j++)
-         {
-            tempData[j] = record.dataSet[i][j].ToString();
-            Debug.Log(record.dataSet[i][6]);
-         }
-         dataList.Add(tempData);
-      }
-      
-      var output = new string[dataSizes + 1][];
+        
+      var output = new string[dataList.Count][];
 
       for (var i = 0; i < output.Length; i++)
       {
@@ -70,14 +84,11 @@ public class Write : MonoBehaviour
          stringBuilder.AppendLine(string.Join(delimiter, output[i]));
       }
 
-      var filePath = GetPath(".csv");
-      var outStream = System.IO.File.CreateText(filePath);
+      var filePath02 = DataUtility.GetPath(textFileName,".csv");
+      var outStream = System.IO.File.CreateText(filePath02);
       outStream.WriteLine(stringBuilder);
       outStream.Close();
-   }
-   private string GetPath(string fileExtenstion)
-   {
-      return Application.streamingAssetsPath + "/HeadMovementData" + "/" + personName + "_" + animationName + "_" +
-             date + fileExtenstion;
+        
+      Debug.Log("Convert End");
    }
 }

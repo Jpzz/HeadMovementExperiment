@@ -8,7 +8,6 @@ public class Receiver : MonoBehaviour
 {
     public OscIn oscIn;
     public Record record;
-    public Data data;
     public Write write;
     public string exportAddress;
     public string experimentAddress;
@@ -74,14 +73,6 @@ public class Receiver : MonoBehaviour
         {
             record.IsExport = true;
             write.ExportTxt();
-        }
-    }
-    
-    public void OnReceiveSave(bool value)
-    {
-        if (value)
-        {
-            data.Save();
         }
     }
 }

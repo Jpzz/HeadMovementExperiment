@@ -2,73 +2,56 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using UnityEngine;
 
 public class Read : MonoBehaviour
 {
-    public string fileName;
+    public string csvFileName;
 
+    public List<float[]> headData = new List<float[]>();
 
-    private void Start()
+    public bool isRead;
+    void Start()
     {
-        ConvertCSV();
+        ReadCSV();
     }
-
-    private void ConvertCSV()
+    private void ReadCSV()
     {
-        Debug.Log("Convert Start");
-        var filePath = GetPath(".txt");
+        var filePath = DataUtility.GetPath(csvFileName, ".csv");
         StreamReader streamReader = new StreamReader(filePath);
         var dataStr = streamReader.ReadToEnd();
         streamReader.Close();
-
-        var splitStr = dataStr.Split(',');
-        Debug.Log(splitStr.Length);
-        var dataList = new List<string[]>();
-        for (var i = 0; i < splitStr.Length; i+=8)
+        var splitStr = dataStr.Split(',','\n');
+        
+        for (var i = 0; i < 34344; i+=8)
         {
-            var array = new string[8];
-            array[0] = splitStr[i];
-            array[1] = splitStr[i + 1];
-            array[2] = splitStr[i + 2];
-            array[3] = splitStr[i + 3];
-            array[4] = splitStr[i + 4];
-            array[5] = splitStr[i + 5];
-            array[6] = splitStr[i + 6];
-            array[7] = splitStr[i + 7];
+            if(i  == 0)
+                continue;
+            var tempData = new float[8];
             
-            dataList.Add(array);
+            float.TryParse(splitStr[i], out tempData[0]);   
+            float.TryParse(splitStr[i+1], out tempData[1]);
+            float.TryParse(splitStr[i+2], out tempData[2]);
+            float.TryParse(splitStr[i+3], out tempData[3]);
+            float.TryParse(splitStr[i+4], out tempData[4]);
+            float.TryParse(splitStr[i+5], out tempData[5]);
+            float.TryParse(splitStr[i+6], out tempData[6]);
+            float.TryParse(splitStr[i+7], out tempData[7]);
+
+            for (var j = 0; j < tempData.Length; j++)
+            {
+                if (!(tempData[j] < 0)) continue;
+                
+                var value = 360 - Mathf.Abs(tempData[j]);
+                tempData[j] = value;
+            }
+            
+            headData.Add(tempData);
         }
         
-        var output = new string[dataList.Count][];
+        //Debug.Log(headData.Count);
+        isRead = true;
 
-        for (var i = 0; i < output.Length; i++)
-        {
-            output[i] = dataList[i];
-        }
-
-        var length = output.GetLength(0);
-        var delimiter = ",";
-        var stringBuilder = new StringBuilder();
-
-        for (var i = 0; i < length; i++)
-        {
-            stringBuilder.AppendLine(string.Join(delimiter, output[i]));
-        }
-
-        var filePath02 = GetPath(".csv");
-        var outStream = System.IO.File.CreateText(filePath02);
-        outStream.WriteLine(stringBuilder);
-        outStream.Close();
-        
-        Debug.Log("Convert End");
     }
-
-    private string GetPath(string fileExtenstion)
-    {
-        var filePath = Application.streamingAssetsPath + "/HeadMovementData" + "/"+ fileName + fileExtenstion;
-
-        return filePath;
-    }
+    
 }

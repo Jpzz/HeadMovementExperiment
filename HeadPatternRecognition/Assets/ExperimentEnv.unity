@@ -602,6 +602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11210527194c8e4f829cce38a642d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textFileName: 
+  IsConvertCSV: 0
   personName: Haemin
   animationName: Henry
   record: {fileID: 978563502}
@@ -1751,7 +1753,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oscIn: {fileID: 2064165165}
   record: {fileID: 978563502}
-  data: {fileID: 0}
   write: {fileID: 978563505}
   exportAddress: /export
   experimentAddress: /experiment

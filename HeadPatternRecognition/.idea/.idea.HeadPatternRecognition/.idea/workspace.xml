@@ -5,8 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExperimentEnv.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExperimentEnv.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Read.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Read.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Read.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Read.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Record.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Write.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Write.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,25 +33,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BarGraph.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Oculus/VR/Scripts/OVRManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transmitter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Record.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Receiver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../IMG_Attraction/IMG_MICRO_VR/Assets/Scripts/VRPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/03) Events/Scripts/EventsExample.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Read.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Scripts/OSCReceiver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../IMG_Attraction/IMG_MICRO_VR/Assets/Scripts/VRManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Scripts/OSCTransmitter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/02) Value Types/Scripts/ValueTypesExample.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Oculus/SampleFramework/Usage/OVROverlayCanvas/Scripts/OVROverlayCanvas.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/01) Getting Started/Scripts/SimpleMessageTransmitter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Visualize.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Documents/카카오톡 받은 파일/Key_Pressed.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Documents/카카오톡 받은 파일/OSC_Controler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LineGraph3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Documents/카카오톡 받은 파일/OscOut.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MarkingSection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Scripts/OSCValue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Write.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/extOSC/Examples/01) Getting Started/Scripts/SimpleMessageReceiver.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -53,10 +54,13 @@
       <option value="$PROJECT_DIR$/Assets/extOSC/Examples/02) Value Types/Scripts/ValueTypesExample.cs" />
       <option value="$PROJECT_DIR$/Assets/OscSimpl/Examples/01 GettingStarted/GettingStartedReceiving.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Data.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Record.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DataUtility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Write.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Read.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Record.cs" />
+      <option value="$USER_HOME$/Documents/카카오톡 받은 파일/Key_Pressed.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1dOJUT9tBwKR2grXmw73w4vwQIS" />
@@ -183,6 +187,9 @@
       <workItem from="1617613619109" duration="57000" />
       <workItem from="1617698349210" duration="1203000" />
       <workItem from="1617769129958" duration="760000" />
+      <workItem from="1618287622082" duration="1245000" />
+      <workItem from="1618293531202" duration="15234000" />
+      <workItem from="1618369202853" duration="4210000" />
     </task>
     <servers />
   </component>
