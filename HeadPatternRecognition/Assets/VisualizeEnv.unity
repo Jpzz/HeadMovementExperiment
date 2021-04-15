@@ -299,7 +299,7 @@ MonoBehaviour:
   read: {fileID: 833014678}
   visualPrefabs: {fileID: 1820161877264689146, guid: b6a2635b163be30498f4264178de2ccf,
     type: 3}
-  heatPrefabs: {fileID: 133325959057775380, guid: 0954ef3b5a2824d4791758876cb0b41f,
+  heatPrefabs: {fileID: 4355197793037142457, guid: 0954ef3b5a2824d4791758876cb0b41f,
     type: 3}
 --- !u!136 &1334295238
 CapsuleCollider:
