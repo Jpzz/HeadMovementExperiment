@@ -1166,6 +1166,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BarGraph.cs" t="Include" />
           <e p="DataUtility.cs" t="Include" />
           <e p="LineGraph3D.cs" t="Include" />
           <e p="MarkingSection.cs" t="Include" />
@@ -1190,7 +1191,6 @@
             <e p="Xiyuan_Henry_2021-04-12.txt" t="Include" />
             <e p="YeEun_Henry_2021-04-12.txt" t="Include" />
             <e p="Youngho_Henry_2021-04-06.txt" t="Include" />
-            <e p="Youngho_Pearl_2021-04-15.txt" t="Include" />
           </e>
         </e>
         <e p="URPSetting" t="Include">
