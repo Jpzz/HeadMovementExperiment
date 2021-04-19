@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Heatmap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Heatmap.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Heatmap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Heatmap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Read.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Read.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BarGraph.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BarGraph.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +24,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BarGraph.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transmitter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Record.cs" root0="FORCE_HIGHLIGHTING" />
@@ -184,6 +182,7 @@
       <workItem from="1618293531202" duration="15234000" />
       <workItem from="1618369202853" duration="4805000" />
       <workItem from="1618470047417" duration="341000" />
+      <workItem from="1618805933056" duration="697000" />
     </task>
     <servers />
   </component>
