@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &266240150
 AudioListener:
   m_ObjectHideFlags: 0
@@ -525,7 +525,6 @@ GameObject:
   - component: {fileID: 978563504}
   - component: {fileID: 978563502}
   - component: {fileID: 978563505}
-  - component: {fileID: 978563503}
   m_Layer: 0
   m_Name: Record
   m_TagString: Untagged
@@ -563,19 +562,6 @@ MonoBehaviour:
   isMark: 0
   isTransition: 0
   isExport: 0
---- !u!114 &978563503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978563501}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cffb953a6872a33448305271e628d9cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: SangWook_Henry_2021-04-12
 --- !u!4 &978563504
 Transform:
   m_ObjectHideFlags: 0
@@ -602,10 +588,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11210527194c8e4f829cce38a642d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFileName: 
+  textFileName: Youngho_Pearl_2021-04-15
   IsConvertCSV: 0
-  personName: Haemin
-  animationName: Henry
+  personName: JiHye
+  animationName: Pearl
   record: {fileID: 978563502}
 --- !u!1 &1024314996
 GameObject:
