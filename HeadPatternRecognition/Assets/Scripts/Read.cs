@@ -25,7 +25,7 @@ public class Read : MonoBehaviour
         
         ///뒤 csv 이상한 값 제거
         var length = splitStr.Length - splitStr.Length % 8;
-        for (var i = 0; i < 34344; i+=8)
+        for (var i = 0; i < length; i+=8)
         {
             if(i  == 0)
                 continue;
