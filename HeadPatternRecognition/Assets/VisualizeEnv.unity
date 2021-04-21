@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fb42c6a9f83534f9b0fd5452cb55ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  csvFileName: Nayea_Henry_2021-04-07
+  csvFileName: HyeIn_Henry_2021-04-07
   isRead: 0
 --- !u!4 &833014679
 Transform:
@@ -299,7 +299,9 @@ MonoBehaviour:
   read: {fileID: 833014678}
   visualPrefabs: {fileID: 1820161877264689146, guid: b6a2635b163be30498f4264178de2ccf,
     type: 3}
-  heatPrefabs: {fileID: 4355197793037142457, guid: 0954ef3b5a2824d4791758876cb0b41f,
+  markPrefabs: {fileID: 6927185375938556390, guid: 0954ef3b5a2824d4791758876cb0b41f,
+    type: 3}
+  heatPrefabs: {fileID: 8506639353450491279, guid: 2d56d2f28b0fb734e801c5828a185498,
     type: 3}
 --- !u!136 &1334295238
 CapsuleCollider:
@@ -518,13 +520,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735455517}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.17, y: 34.1, z: 12.8}
+  m_LocalRotation: {x: 0.33687112, y: -0, z: -0, w: 0.9415508}
+  m_LocalPosition: {x: 0.17, y: 31.5, z: -45.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 39.373, y: 0, z: 0}
 --- !u!1 &1748986491
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,8 +673,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 35.53
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

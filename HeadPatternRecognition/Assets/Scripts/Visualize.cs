@@ -6,8 +6,10 @@ using UnityEngine;
 public class Visualize : MonoBehaviour
 {
     public Read read;
-    public GameObject visualPrefabs;
+    public GameObject[] visualPrefabs;
+    public GameObject markPrefabs;
     public GameObject heatPrefabs;
+    public GameObject linePrefabs;
     
     #region Private Variables
 
@@ -16,12 +18,13 @@ public class Visualize : MonoBehaviour
     private GameObject heatmapP;
     private bool loop;
     //원 각도
-    private int degree;
+    private float degree;
     //비주얼라이즈 원 크기
     private float radius = 30;
     //움직임에 따른 가중치
     private float yWeight = 0.05f;
 
+    private int prefabsIndex = 0;
     #endregion
     
     private void Start()
@@ -40,7 +43,7 @@ public class Visualize : MonoBehaviour
         }
     }
 
-
+    
     private IEnumerator CoVisualize()
     {
         for (var i = 0; i < read.headData.Count; i++)
@@ -57,8 +60,8 @@ public class Visualize : MonoBehaviour
                 var velocity = CalAllVelocity(qot, qot2, 0.1f);
                 
                 ///속도에 따른 가중치 계산
-                if (velocity < 6)
-                    yWeight += 0.01f;
+                if (velocity < 8)
+                    yWeight += 0.005f;
                 else
                     yWeight = 0.1f;
                 
@@ -69,19 +72,29 @@ public class Visualize : MonoBehaviour
                 ///Degree에 따른 Radian 계산
                 var radian = degree * Mathf.PI / 180;
                 ///생성 오브젝트 Look at을 위한 다음 위치 계산
-                var nextRadian = (degree + 1) * Mathf.PI / 180;
+                var nextRadian = (degree + 1.5f) * Mathf.PI / 180;
+
+                GameObject go = null;
+                var mark = false;
                 
-                var go = Instantiate(visualPrefabs,visualP.transform);
-                if (read.headData[i][7] == 1)
+                if (read.headData[i][7] == 0)
                 {
+                    go = Instantiate(visualPrefabs[prefabsIndex],visualP.transform);
+                }
+                else if (read.headData[i][7] == 1)
+                {
+                    go = Instantiate(markPrefabs, visualP.transform);
                     go.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                     go.name = "marking visualize";
+                    mark = true;
                 }
-
-                if (read.headData[i][7] == 2)
+                else if (read.headData[i][7] == 2)
                 {
+                    go = Instantiate(markPrefabs, visualP.transform);
                     go.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.green;
                     go.name = "transition visualize";
+                    prefabsIndex++;
+                    mark = true;
                 }
                 
                 go.transform.position = new Vector3(Mathf.Sin(radian) * radius, 0f, Mathf.Cos(radian) * radius);
@@ -89,11 +102,19 @@ public class Visualize : MonoBehaviour
                 go.transform.LookAt(new Vector3(Mathf.Sin(nextRadian) * (radius-0.005f), 0f, Mathf.Cos(nextRadian) * (radius-0.005f)));
                 ///속도 비율 줄이기
                 var convertVel = velocity / 100;
-                
-                if(convertVel > 0.02f)
-                    go.transform.localScale = new Vector3(velocity/100, yWeight, 0.1f);
+
+                if (mark)
+                {
+                    go.transform.localScale = new Vector3(1f, 1f, 1f);
+                }
                 else
-                    go.transform.localScale = new Vector3(0.02f, yWeight, 0.1f);
+                {
+                    if(convertVel > 0.04f)
+                        go.transform.localScale = new Vector3(velocity/100, yWeight, 0.4f);
+                    else
+                        go.transform.localScale = new Vector3(0.04f, yWeight, 0.4f);  
+                }
+                
             }
             /// 어몽어스 캐릭터 시뮬레이션
             var rotation = new Vector3(read.headData[i][0] - read.headData[0][0], read.headData[i][1]-read.headData[0][1], read.headData[i][2]-read.headData[0][2]);
@@ -104,8 +125,8 @@ public class Visualize : MonoBehaviour
             heatMap.transform.LookAt(transform);
             yield return new WaitForSeconds(0.1f);
             ///변수 갱신
-            degree++;
-            radius -= 0.003f;
+            degree+=1.5f;
+            radius -= 0.006f;
         }
     }
     
@@ -115,5 +136,11 @@ public class Visualize : MonoBehaviour
         var velocity = angle / time;
 
         return velocity;
+    }
+
+    private void LineVisualize(LineRenderer renderer, int index, float value)
+    {
+        var position = new Vector3(index)
+        renderer.SetPosition(index,);
     }
 }
