@@ -21,7 +21,12 @@ public class Record : MonoBehaviour
         //CameraRecenter();
         Reset();
         
-        
+        if(isCheckTime)
+        {
+            curTime += Time.deltaTime;
+            timeText.text = "Time : " + curTime.ToString();
+        }
+        //UpdateRecord();
         OculusInput();
     }
 
@@ -46,6 +51,9 @@ public class Record : MonoBehaviour
     [Header("Rotation X")] public Text rotationXText;
     [Header("Rotation Y")] public Text rotationYText;
     [Header("Rotation Z")] public Text rotationZText;
+    public Text indexText;
+    public Text timeText;
+
     //-------------------------------------------------------------------------------------------------
     /// <summary>
     /// IsCenter => Camera ReCenter, IsStartExperiment => Experiment Start, IsReset => Contents Reset, IsMarkStart => Marking, IsMarkEnd => Mark End
@@ -110,6 +118,12 @@ public class Record : MonoBehaviour
     private float recordedTime;
 
     private int mark;
+
+    private int index;
+    private float checkTimer;
+
+    private float curTime = 0f;
+    private bool isCheckTime;
     //-------------------------------------------------------------------------------------------------
 
     //-------------------------------------------------------------------------------------------------
@@ -167,6 +181,22 @@ public class Record : MonoBehaviour
 
     #region Record
 
+
+    private void UpdateRecord()
+    {
+        if(isCenter && isStartExperiment && !isExport)
+        {
+            stateText.text = "State Start";
+            isCheckTime = true;
+
+            checkTimer += Time.deltaTime;
+            if(checkTimer >= saveIntervalTime)
+            {
+                checkTimer = 0f;
+                UpdateHeadTransform();
+            }
+        }
+    }
     private IEnumerator CoRecord()
     {
         while (!isCenter)
@@ -177,9 +207,10 @@ public class Record : MonoBehaviour
         if (isCenter && isStartExperiment && !isExport)
         {
             stateText.text = "State Start";
+            isCheckTime = true;
             UpdateHeadTransform();
         }
-        yield return new WaitForSeconds(saveIntervalTime);
+        yield return new WaitForSecondsRealtime(saveIntervalTime);
         StartCoroutine(CoRecord());
     }
     
@@ -254,11 +285,11 @@ public class Record : MonoBehaviour
         headTRData[7] = mark;
         //dataSet.Add(headTRData);
 
-
+        index++;
         rotationXText.text = headTRData[0].ToString();
         rotationYText.text = headTRData[1].ToString();
         rotationZText.text = headTRData[2].ToString();
-
+        indexText.text = "Count : " + index.ToString();
         for (var i = 0; i < headTRData.Length; i++)
         {
             var temp = "," + headTRData[i];
