@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
@@ -7,26 +8,22 @@ using UnityEngine.UI;
 
 public class Record : MonoBehaviour
 {
-
     #region Monobehaviour
-    
+
     private void Start()
     {
-        Application.targetFrameRate = 30;
+        Application.targetFrameRate = 60;
+        startTime = Time.time;
         controller = OVRInput.Controller.RTouch;
         Initialize();
         //StartCoroutine(CoRecord());
     }
+
     void Update()
     {
         //CameraRecenter();
         Reset();
         
-        if(isCheckTime)
-        {
-            curTime += Time.deltaTime;
-            timeText.text = "Time : " + curTime.ToString();
-        }
         UpdateRecord();
         OculusInput();
     }
@@ -34,7 +31,7 @@ public class Record : MonoBehaviour
     #endregion
 
     #region Public Variables
-    
+
     //-------------------------------------------------------------------------------------------------
 
     [Header("OVR Manager")] public OVRManager OVRManager;
@@ -43,6 +40,7 @@ public class Record : MonoBehaviour
     [Header("Interval Time")] public float saveIntervalTime;
 
     [Header("Data String")] public string dataStr;
+
     //-------------------------------------------------------------------------------------------------
     [Header("Controller")] public OVRInput.Controller controller;
 
@@ -64,22 +62,25 @@ public class Record : MonoBehaviour
         get => isCenter;
         set => isCenter = value;
     }
+
     public bool IsStartExperiment
     {
         get => isStartExperiment;
         set => isStartExperiment = value;
     }
+
     public bool IsReset
     {
         get => isReset;
         set => isReset = value;
     }
+
     public bool IsMark
     {
         get => isMark;
         set => isMark = value;
     }
-    
+
     public bool IsExport
     {
         get => isExport;
@@ -101,19 +102,21 @@ public class Record : MonoBehaviour
     #endregion
 
     #region Private Variables
-    
+
     [SerializeField] private bool isStartExperiment;
     [SerializeField] private bool isCenter;
     [SerializeField] private bool isReset;
     [SerializeField] private bool isMark;
     [SerializeField] private bool isTransition;
+
     [SerializeField] private bool isExport;
+
     //-------------------------------------------------------------------------------------------------
     /// <summary>
     /// Head Data
     /// </summary>
-    
     private float xQuaternion, yQuaternion, zQuaternion;
+
     private float xEuler, yEuler, zEuler;
     private float xPos, yPos, zPos;
     private float recordedTime;
@@ -123,13 +126,15 @@ public class Record : MonoBehaviour
     private int index;
     private float checkTimer;
 
+    private float startTime;
     private float curTime = 0f;
     private bool isCheckTime;
+
+    private bool coLoop;
     //-------------------------------------------------------------------------------------------------
 
     //-------------------------------------------------------------------------------------------------
-    
-    
+
     #endregion
 
     #region Setting
@@ -151,8 +156,10 @@ public class Record : MonoBehaviour
                 dataStr += temp;
             }
         }
+
         Debug.Log(tags.Length);
     }
+
     /// <summary>
     /// Input Space key => OVR Camera recenter
     /// </summary>
@@ -161,6 +168,7 @@ public class Record : MonoBehaviour
         OVRManager.OVRRecenter();
         isCenter = true;
     }
+
     /// <summary>
     /// Press Start Experiment Button
     /// </summary>
@@ -182,41 +190,39 @@ public class Record : MonoBehaviour
 
     #region Record
 
-
     private void UpdateRecord()
     {
-        if(isCenter && isStartExperiment && !isExport)
+        if (isStartExperiment && !isExport)
         {
             stateText.text = "State Start";
-            isCheckTime = true;
-
+        
             checkTimer += Time.deltaTime;
-            if(checkTimer >= saveIntervalTime)
+            checkTimer = Mathf.Round(checkTimer * 100) * 0.01f;
+            
+            if (checkTimer >= 0.1f)
             {
                 checkTimer = 0f;
                 UpdateHeadTransform();
             }
+            curTime += Time.deltaTime;
+            timeText.text = "Time :" + string.Format("{0:N2}", curTime) + " Checktimer : "+ checkTimer.ToString();
         }
     }
+
     private IEnumerator CoRecord()
     {
-        while (!isCenter)
+        while (true)
         {
-            yield return null;
+            if (isStartExperiment && !isExport)
+            {
+                stateText.text = "State Start";
+                isCheckTime = true;
+                UpdateHeadTransform(); 
+            }
+            yield return new WaitForSeconds(0.1f);
         }
-        
-        if (isCenter && isStartExperiment && !isExport)
-        {
-            stateText.text = "State Start";
-            isCheckTime = true;
-
-           
-            UpdateHeadTransform();
-        }
-        yield return new WaitForSecondsRealtime(saveIntervalTime);
-        StartCoroutine(CoRecord());
     }
-    
+
     /// <summary>
     /// dataSet Index
     /// 0 : X Euler , 1 : Y Euler , 2 : Z Euler
@@ -235,7 +241,7 @@ public class Record : MonoBehaviour
         yPos = HeadTransform.position.y;
         zPos = HeadTransform.position.z;
 
-        
+
         if (xQuaternion < 0)
             xEuler -= 360;
         else if (xQuaternion > 1)
@@ -253,8 +259,8 @@ public class Record : MonoBehaviour
 
         else if (zQuaternion > 1)
             zEuler += 180;
-        
-        recordedTime += saveIntervalTime;
+
+        recordedTime = curTime;
         var headTRData = new float[8];
         headTRData[0] = xEuler;
         headTRData[1] = yEuler;
@@ -271,7 +277,7 @@ public class Record : MonoBehaviour
                 markText.text = "None Cue";
                 mark = 0;
             }
-            else if(isMark)
+            else if (isMark)
             {
                 markText.text = "Marking Cue";
                 isMark = false;
@@ -284,26 +290,24 @@ public class Record : MonoBehaviour
             mark = 2;
             IsTransition = false;
         }
-       
+
         headTRData[7] = mark;
         //dataSet.Add(headTRData);
-
         index++;
+        indexText.text = "Count : " + index.ToString();
         rotationXText.text = headTRData[0].ToString();
         rotationYText.text = headTRData[1].ToString();
         rotationZText.text = headTRData[2].ToString();
-        indexText.text = "Count : " + index.ToString();
         for (var i = 0; i < headTRData.Length; i++)
         {
             var temp = "," + headTRData[i];
             dataStr += temp;
         }
-        
+
         Debug.Log("Data set sizes :" + dataSet.Count);
     }
 
-   
-    
+
     private float CalculateVelocity(Vector3 a, Vector3 b, float time)
     {
         var p = Quaternion.Euler(a);
@@ -319,7 +323,7 @@ public class Record : MonoBehaviour
         var acceleration = sub / time;
         return acceleration;
     }
-    
+
     #endregion
 
     private void OculusInput()
@@ -328,14 +332,14 @@ public class Record : MonoBehaviour
         {
             isStartExperiment = true;
             CameraRecenter();
-            
+
             Debug.Log("START EXPERIMENT");
         }
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, controller))
         {
             isMark = true;
-            
+
             Debug.Log("MARK");
         }
     }

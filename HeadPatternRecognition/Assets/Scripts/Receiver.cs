@@ -32,7 +32,7 @@ public class Receiver : MonoBehaviour
         if(value == 1)
         {
             record.IsStartExperiment = true;
-            record.CameraRecenter();
+            //record.CameraRecenter();
         }
     }
     

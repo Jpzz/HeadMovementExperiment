@@ -4,10 +4,9 @@
     <list default="true" id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Line.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Line.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sphere.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Record.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +25,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../IMG_Attraction/IMG_MICRO_VR/Assets/Scripts/VRManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transmitter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Visualize.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Record.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Receiver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../IMG_Attraction/IMG_MICRO_VR/Assets/Scripts/VRPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BarGraph.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../IMG_Attraction/IMG_MICRO_VR/Assets/Scripts/VRManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Visualize.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Documents/카카오톡 받은 파일/Key_Pressed.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Documents/카카오톡 받은 파일/OSC_Controler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LineGraph3D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Documents/카카오톡 받은 파일/OscOut.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BarGraph.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MarkingSection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Write.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -48,14 +44,14 @@
       <option value="$PROJECT_DIR$/Assets/extOSC/Examples/02) Value Types/Scripts/ValueTypesExample.cs" />
       <option value="$PROJECT_DIR$/Assets/OscSimpl/Examples/01 GettingStarted/GettingStartedReceiving.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Data.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Record.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DataUtility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Write.cs" />
       <option value="$USER_HOME$/Documents/카카오톡 받은 파일/Key_Pressed.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Read.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RayTest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Record.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1dOJUT9tBwKR2grXmw73w4vwQIS" />
@@ -190,6 +186,8 @@
       <workItem from="1618888462696" duration="2515000" />
       <workItem from="1618931089281" duration="1800000" />
       <workItem from="1618977592651" duration="729000" />
+      <workItem from="1619100002715" duration="1408000" />
+      <workItem from="1619101577367" duration="4344000" />
     </task>
     <servers />
   </component>
