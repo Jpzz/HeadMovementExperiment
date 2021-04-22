@@ -25,6 +25,8 @@ public class Visualize : MonoBehaviour
     private float yWeight = 0.05f;
 
     private int prefabsIndex = 0;
+
+    private LineRenderer lineRenderer;
     #endregion
     
     private void Start()
@@ -32,6 +34,8 @@ public class Visualize : MonoBehaviour
         transform = GetComponent<Transform>();
         visualP = GameObject.FindWithTag("Visualize");
         heatmapP = GameObject.FindWithTag("Heatmap");
+        lineRenderer = linePrefabs.GetComponent<LineRenderer>();
+        
     }
 
     private void Update()
@@ -46,6 +50,7 @@ public class Visualize : MonoBehaviour
     
     private IEnumerator CoVisualize()
     {
+        lineRenderer.positionCount = read.headData.Count - 1;
         for (var i = 0; i < read.headData.Count; i++)
         {
             if (i > 0)
@@ -114,7 +119,6 @@ public class Visualize : MonoBehaviour
                     else
                         go.transform.localScale = new Vector3(0.04f, yWeight, 0.4f);  
                 }
-                
             }
             /// 어몽어스 캐릭터 시뮬레이션
             var rotation = new Vector3(read.headData[i][0] - read.headData[0][0], read.headData[i][1]-read.headData[0][1], read.headData[i][2]-read.headData[0][2]);
@@ -123,24 +127,35 @@ public class Visualize : MonoBehaviour
             var heatMap = Instantiate(heatPrefabs, heatmapP.transform);
             heatMap.transform.position = transform.forward * 10f;
             heatMap.transform.LookAt(transform);
+            
+            RaycastHeatMap(transform);
             yield return new WaitForSeconds(0.1f);
             ///변수 갱신
             degree+=1.5f;
             radius -= 0.006f;
         }
     }
-    
+
+
+    private void RaycastHeatMap(Transform tr)
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(tr.position,tr.forward, out hit,Mathf.Infinity))
+        {
+            Debug.Log(hit.transform.name);
+            Debug.DrawRay(tr.position, tr.forward, Color.red);
+        }
+        else
+        {
+            Debug.DrawRay(tr.position, tr.forward, Color.blue);
+        }
+    }
     private float CalAllVelocity(Quaternion qot, Quaternion qot2, float time)
     {
         var angle = Quaternion.Angle(qot, qot2);
         var velocity = angle / time;
 
         return velocity;
-    }
-
-    private void LineVisualize(LineRenderer renderer, int index, float value)
-    {
-        var position = new Vector3(index)
-        renderer.SetPosition(index,);
     }
 }

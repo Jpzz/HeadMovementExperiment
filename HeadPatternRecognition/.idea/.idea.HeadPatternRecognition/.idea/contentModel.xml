@@ -1170,6 +1170,7 @@
           <e p="DataUtility.cs" t="Include" />
           <e p="LineGraph3D.cs" t="Include" />
           <e p="MarkingSection.cs" t="Include" />
+          <e p="RayTest.cs" t="Include" />
           <e p="Read.cs" t="Include" />
           <e p="Receiver.cs" t="Include" />
           <e p="Record.cs" t="Include" />
@@ -1189,6 +1190,7 @@
             <e p="Jungho_ArdensWake_2021-04-06.txt" t="Include" />
             <e p="Jungho_Henry_2021-04-05.txt" t="Include" />
             <e p="Nayea_Henry_2021-04-07.txt" t="Include" />
+            <e p="Nayea_Pearl_2021-04-20.txt" t="Include" />
             <e p="SangWook_Henry_2021-04-12.txt" t="Include" />
             <e p="Xiyuan_Henry_2021-04-12.txt" t="Include" />
             <e p="Xiyuan_Pearl_2021-04-19.txt" t="Include" />

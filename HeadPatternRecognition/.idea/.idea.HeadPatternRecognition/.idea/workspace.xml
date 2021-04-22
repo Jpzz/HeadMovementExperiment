@@ -4,14 +4,8 @@
     <list default="true" id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Heatmap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Heatmap.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Line.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Line.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Heatmap.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Heatmap.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Read.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Read.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Line.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Line.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sphere.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" afterDir="false" />
     </list>
@@ -61,6 +55,7 @@
       <option value="$USER_HOME$/Documents/카카오톡 받은 파일/Key_Pressed.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Read.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RayTest.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1dOJUT9tBwKR2grXmw73w4vwQIS" />
@@ -193,6 +188,8 @@
       <workItem from="1618470047417" duration="341000" />
       <workItem from="1618837527909" duration="4157000" />
       <workItem from="1618888462696" duration="2515000" />
+      <workItem from="1618931089281" duration="1800000" />
+      <workItem from="1618977592651" duration="729000" />
     </task>
     <servers />
   </component>
