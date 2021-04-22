@@ -12,9 +12,10 @@ public class Record : MonoBehaviour
     
     private void Start()
     {
+        Application.targetFrameRate = 30;
         controller = OVRInput.Controller.RTouch;
         Initialize();
-        StartCoroutine(CoRecord());
+        //StartCoroutine(CoRecord());
     }
     void Update()
     {
@@ -26,7 +27,7 @@ public class Record : MonoBehaviour
             curTime += Time.deltaTime;
             timeText.text = "Time : " + curTime.ToString();
         }
-        //UpdateRecord();
+        UpdateRecord();
         OculusInput();
     }
 
@@ -208,6 +209,8 @@ public class Record : MonoBehaviour
         {
             stateText.text = "State Start";
             isCheckTime = true;
+
+           
             UpdateHeadTransform();
         }
         yield return new WaitForSecondsRealtime(saveIntervalTime);
