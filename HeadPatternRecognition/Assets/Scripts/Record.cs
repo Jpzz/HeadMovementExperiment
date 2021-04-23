@@ -10,14 +10,34 @@ public class Record : MonoBehaviour
 {
     #region Monobehaviour
 
+    private void Awake()
+    {
+       
+    }
+
     private void Start()
     {
-        Application.targetFrameRate = 60;
-        startTime = Time.time;
         controller = OVRInput.Controller.RTouch;
         Initialize();
         //StartCoroutine(CoRecord());
+
+
+        aTimer = new System.Timers.Timer(100);
+        aTimer.Elapsed += OntimedEvent;
+        aTimer.Enabled = true;
     }
+
+
+    bool temp;
+    void OntimedEvent(System.Object source, ElapsedEventArgs e)
+    {
+        if (isStartExperiment && !isExport)
+        {
+            temp = true;
+            Debug.Log("AAAAA : " + System.DateTime.Now.Second  + " , " +System.DateTime.Now.Millisecond);
+        }
+    }
+
 
     void Update()
     {
@@ -26,6 +46,10 @@ public class Record : MonoBehaviour
         
         UpdateRecord();
         OculusInput();
+    }
+    private void OnDisable()
+    {
+        aTimer.Dispose();
     }
 
     #endregion
@@ -92,6 +116,7 @@ public class Record : MonoBehaviour
         get => isTransition;
         set => isTransition = value;
     }
+    public bool isStart = false;
 
     [Header("Head Data")] public List<float[]> dataSet = new List<float[]>();
 
@@ -111,6 +136,7 @@ public class Record : MonoBehaviour
 
     [SerializeField] private bool isExport;
 
+
     //-------------------------------------------------------------------------------------------------
     /// <summary>
     /// Head Data
@@ -124,13 +150,12 @@ public class Record : MonoBehaviour
     private int mark;
 
     private int index;
-    private float checkTimer;
-
-    private float startTime;
     private float curTime = 0f;
-    private bool isCheckTime;
+    private float startTime = 0f;
 
-    private bool coLoop;
+    Timer aTimer;
+
+
     //-------------------------------------------------------------------------------------------------
 
     //-------------------------------------------------------------------------------------------------
@@ -194,34 +219,26 @@ public class Record : MonoBehaviour
     {
         if (isStartExperiment && !isExport)
         {
-            stateText.text = "State Start";
-        
-            checkTimer += Time.deltaTime;
-            checkTimer = Mathf.Round(checkTimer * 100) * 0.01f;
             
-            if (checkTimer >= 0.1f)
+            stateText.text = "State Start";
+            
+            if(isStart)
             {
-                checkTimer = 0f;
+                isStart = false;
+                startTime = DateTime.Now.Second;
+            }
+            if(temp)
+            {
+                temp = false;
                 UpdateHeadTransform();
             }
-            curTime += Time.deltaTime;
-            timeText.text = "Time :" + string.Format("{0:N2}", curTime) + " Checktimer : "+ checkTimer.ToString();
+
+            curTime = System.DateTime.Now.Second - startTime;
+            timeText.text = "Time :" + string.Format("{0:N2}", curTime);
         }
     }
 
-    private IEnumerator CoRecord()
-    {
-        while (true)
-        {
-            if (isStartExperiment && !isExport)
-            {
-                stateText.text = "State Start";
-                isCheckTime = true;
-                UpdateHeadTransform(); 
-            }
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
+ 
 
     /// <summary>
     /// dataSet Index
@@ -260,7 +277,7 @@ public class Record : MonoBehaviour
         else if (zQuaternion > 1)
             zEuler += 180;
 
-        recordedTime = curTime;
+        recordedTime +=0.1f;
         var headTRData = new float[8];
         headTRData[0] = xEuler;
         headTRData[1] = yEuler;
@@ -304,7 +321,7 @@ public class Record : MonoBehaviour
             dataStr += temp;
         }
 
-        Debug.Log("Data set sizes :" + dataSet.Count);
+       // Debug.Log("Data set sizes :" + dataSet.Count);
     }
 
 
