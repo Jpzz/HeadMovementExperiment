@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f197dee-a8cd-4b76-a680-a95f59a24cb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeadPatternRecognition/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Line.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Line.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Plane.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Plane.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sphere.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Visualize.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Visualize.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Visualize02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Visualize02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Visualize03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Visualize03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Visualize04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Visualize04.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Visualize05.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Visualize05.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mark.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RayTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RayTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Receiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Record.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Visualize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Xiyuan_Pearl_2021-04-19.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Xiyuan_Pearl_2021-04-19.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Xiyuan_Pearl_2021-04-19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Xiyuan_Pearl_2021-04-19.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Xiyuan_Pearl_2021-04-23.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/Xiyuan_Pearl_2021-04-23.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/zNex~$hareNayea_Pearl_2021-04-22.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HeadMovementData/zNex~$hareNayea_Pearl_2021-04-22.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VisualizeEnv.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +191,7 @@
       <workItem from="1619160668025" duration="5920000" />
       <workItem from="1619190286922" duration="4079000" />
       <workItem from="1619241248934" duration="9748000" />
-      <workItem from="1619405004035" duration="3533000" />
+      <workItem from="1619405004035" duration="8667000" />
     </task>
     <servers />
   </component>

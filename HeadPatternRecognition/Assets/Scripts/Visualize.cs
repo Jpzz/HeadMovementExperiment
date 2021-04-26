@@ -29,8 +29,13 @@ public class Visualize : MonoBehaviour
     private int prefabsIndex = 0;
     private LineRenderer lineRenderer;
     private float weightStopTime = 0f;
-
+    
+    
+    //히트맵 합치기, 펼치기 변수
+    private int curLineVertexCount = 0;
+    private Vector3[] heatPosition;
     private GameObject[] mapPlane;
+    
     #endregion
     
     private void Start()
@@ -40,6 +45,7 @@ public class Visualize : MonoBehaviour
         heatmapP = GameObject.FindWithTag("Heatmap");
         heatmapP.gameObject.SetActive(false);
         lineRenderer = linePrefabs.GetComponent<LineRenderer>();
+        heatPosition = new Vector3[read.headData.Count];
         mapPlane = new GameObject[read.headData.Count];    
         StartCoroutine(CoVisualize());
     }
@@ -161,7 +167,7 @@ public class Visualize : MonoBehaviour
         Debug.Log("Marking");
         
         var go = Instantiate(markPrefabs, position, Quaternion.identity, visualP.transform);
-        go.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        go.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
         go.transform.name = "Line Marker";
         if (read.headData[index][7] == 1)
             go.transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
@@ -177,25 +183,46 @@ public class Visualize : MonoBehaviour
             mapPlane[i].SetActive(false);
         }
         mapPlane[0].SetActive(true);
-        
-        
-        
-        for (var i = 0; i < read.headData.Count; i++)
+
+        mapPlane[0].transform.GetComponent<Renderer>().sharedMaterial.color = new Color(1f, 1f, 1f, 1f);
+
+        for (var i = 0; i < curLineVertexCount; i++)
         {
             var position = lineRenderer.GetPosition(i);
-            var newPosition = new Vector3();
-            DOTween.To(() => newPosition, x => newPosition = x, new Vector3(position.x,position.y, 0f), 1f);
+            var position02 = new Vector3(position.x, position.y, 50f);
+            lineRenderer.SetPosition(i, position02);
         }
+
+        lineRenderer.widthMultiplier = 0.1f;
+    }
+
+    public void UnMergeHeatMap()
+    {
+        for (var i = 0; i < mapPlane.Length; i++)
+        {
+            mapPlane[i].SetActive(true);
+        }
+        mapPlane[0].transform.GetComponent<Renderer>().sharedMaterial.color = new Color(1f, 1f, 1f, 0.03f);
+        
+        for (var i = 0; i < curLineVertexCount; i++)
+        {
+            var position = heatPosition[i];
+            lineRenderer.SetPosition(i, position);
+        }
+        
+        lineRenderer.widthMultiplier = 0.3f;
     }
     
     private void SetLineRenderer(int index, Vector3 position)
     {
         lineRenderer.positionCount = index + 1;
+        curLineVertexCount++;
         lineRenderer.SetPosition(index, position);
         var quad = Instantiate(this.mapPlanePrefabs, new Vector3(mapWidth/2 - mapWidth/2, mapWidth/4, 50f+index*0.5f), Quaternion.identity);
         quad.transform.SetParent(visualP.transform);
+        quad.name = "box" + index;
         mapPlane[index] = quad;
-        Debug.Log(mapPlane[index].name);
+        heatPosition[index] = position;
     }
     private float CalAllVelocity(Quaternion qot, Quaternion qot2, float time)
     {
