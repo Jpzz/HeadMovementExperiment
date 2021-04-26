@@ -9,12 +9,6 @@ using UnityEngine.UI;
 public class Record : MonoBehaviour
 {
     #region Monobehaviour
-
-    private void Awake()
-    {
-       
-    }
-
     private void Start()
     {
         controller = OVRInput.Controller.RTouch;
@@ -22,18 +16,17 @@ public class Record : MonoBehaviour
         //StartCoroutine(CoRecord());
 
 
-        aTimer = new System.Timers.Timer(100);
-        aTimer.Elapsed += OntimedEvent;
-        aTimer.Enabled = true;
+        myTimer = new System.Timers.Timer(100);
+        myTimer.Elapsed += OntimedEvent;
+        myTimer.Enabled = true;
     }
 
 
-    bool temp;
     void OntimedEvent(System.Object source, ElapsedEventArgs e)
     {
         if (isStartExperiment && !isExport)
         {
-            temp = true;
+            isEvent = true;
             Debug.Log("AAAAA : " + System.DateTime.Now.Second  + " , " +System.DateTime.Now.Millisecond);
         }
     }
@@ -49,7 +42,7 @@ public class Record : MonoBehaviour
     }
     private void OnDisable()
     {
-        aTimer.Dispose();
+        myTimer.Dispose();
     }
 
     #endregion
@@ -116,7 +109,7 @@ public class Record : MonoBehaviour
         get => isTransition;
         set => isTransition = value;
     }
-    public bool isStart = false;
+    public bool IsCheckTime = false;
 
     [Header("Head Data")] public List<float[]> dataSet = new List<float[]>();
 
@@ -152,8 +145,9 @@ public class Record : MonoBehaviour
     private int index;
     private float curTime = 0f;
     private float startTime = 0f;
+    private bool isEvent;
 
-    Timer aTimer;
+    Timer myTimer;
 
 
     //-------------------------------------------------------------------------------------------------
@@ -222,14 +216,14 @@ public class Record : MonoBehaviour
             
             stateText.text = "State Start";
             
-            if(isStart)
+            if(IsCheckTime)
             {
-                isStart = false;
+                IsCheckTime = false;
                 startTime = DateTime.Now.Second;
             }
-            if(temp)
+            if(isEvent)
             {
-                temp = false;
+                isEvent = false;
                 UpdateHeadTransform();
             }
 

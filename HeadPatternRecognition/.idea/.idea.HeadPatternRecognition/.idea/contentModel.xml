@@ -4,7 +4,9 @@
     <e p="C:\Users\Jpzz\AppData\local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Jpzz\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_HeadPatternRecognition.1437026867.00" t="ExcludeRecursive" />
     <e p="D:\UNITY_PROJECT\HeadMovementExperiment\HeadPatternRecognition" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AssetResource" t="Include">
@@ -1165,8 +1167,47 @@
             </e>
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DemiLib" t="Include">
+              <e p="Core" t="Include">
+                <e p="DemiLib.xml" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DemiEditor.xml" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
+            <e p="DOTweenPro" t="Include">
+              <e p="DOTweenAnimation.cs" t="Include" />
+              <e p="DOTweenDeAudio.cs" t="Include" />
+              <e p="DOTweenDeUnityExtended.cs" t="Include" />
+              <e p="DOTweenProShortcuts.cs" t="Include" />
+              <e p="DOTweenTextMeshPro.cs" t="Include" />
+              <e p="DOTweenTk2d.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DOTweenAnimationInspector.cs" t="Include" />
+                <e p="DOTweenPreviewManager.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
+            <e p="readme_DOTweenPro.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="BarGraph.cs" t="Include" />
+          <e p="CameraControl.cs" t="Include" />
           <e p="DataUtility.cs" t="Include" />
           <e p="LineGraph3D.cs" t="Include" />
           <e p="MarkingSection.cs" t="Include" />
@@ -1190,11 +1231,10 @@
             <e p="Jungho_ArdensWake_2021-04-06.txt" t="Include" />
             <e p="Jungho_Henry_2021-04-05.txt" t="Include" />
             <e p="Nayea_Henry_2021-04-07.txt" t="Include" />
-            <e p="Nayea_Pearl_2021-04-20.txt" t="Include" />
-            <e p="Nayea_Pearl_2021-04-22.txt" t="Include" />
+            <e p="Nayea_Pearl_2021-04-23.txt" t="Include" />
             <e p="SangWook_Henry_2021-04-12.txt" t="Include" />
             <e p="Xiyuan_Henry_2021-04-12.txt" t="Include" />
-            <e p="Xiyuan_Pearl_2021-04-19.txt" t="Include" />
+            <e p="Xiyuan_Pearl_2021-04-23.txt" t="Include" />
             <e p="YeEun_Henry_2021-04-12.txt" t="Include" />
             <e p="YeEun_Pearl_2021-04-21.txt" t="Include" />
             <e p="Youngho_Henry_2021-04-06.txt" t="Include" />
