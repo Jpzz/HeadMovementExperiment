@@ -715,6 +715,7 @@ MonoBehaviour:
   rotationZText: {fileID: 1567127991}
   indexText: {fileID: 261007101}
   timeText: {fileID: 483612496}
+  IsCheckTime: 0
   tags: []
   isStartExperiment: 0
   isCenter: 0
@@ -750,7 +751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textFileName: YeEun_Pearl_2021-04-21
   IsConvertCSV: 0
-  personName: Nayea
+  personName: Haemin
   animationName: Pearl
   record: {fileID: 978563502}
 --- !u!1 &1024314996
