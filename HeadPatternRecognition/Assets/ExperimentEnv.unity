@@ -749,9 +749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11210527194c8e4f829cce38a642d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFileName: GyungTae_Pearl_2021-04-26
+  textFileName: SangWook_Pearl_2021-05-06
   IsConvertCSV: 0
-  personName: SangWook
+  personName: HyungIn
   animationName: Henry
   record: {fileID: 978563502}
 --- !u!1 &1024314996
