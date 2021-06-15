@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Write : MonoBehaviour
 {
@@ -14,10 +16,20 @@ public class Write : MonoBehaviour
    public string personName;
    public string animationName;
    public Record record;
+
+   public Text personNameText;
+   public Text animationText;
+   public Text ipText;
+   public Text convertFileText;
+   public Text isConvertText;
+   public Text isExportText;
+   public Text ExportText;
    
    private string date;
    private string path;
+   private string settingPath;
 
+   private bool isJsonLoad;
    private List<string[]> dataList = new List<string[]>();
    private void Awake()
    {
@@ -26,10 +38,36 @@ public class Write : MonoBehaviour
 
    private void Start()
    {
-      if(IsConvertCSV)
+      LoadJson();
+      
+      if(IsConvertCSV && isJsonLoad)
          ConvertCSV();
    }
-
+   
+   private void LoadJson()
+   {
+      string hostname = Dns.GetHostName();
+      IPAddress[] ipaddress = Dns.GetHostEntry(hostname).AddressList;
+      foreach (IPAddress ip in ipaddress) {
+         if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork) {
+            ipText.text = ip.ToString();
+         }
+      }
+      
+      settingPath = Application.streamingAssetsPath + "/Data/Setting.json";
+      var data = File.ReadAllText(settingPath);
+      Setting setting = JsonUtility.FromJson<Setting>(data);
+      textFileName = setting.ConvertFile;
+      convertFileText.text = "ConvertFile : " +textFileName;
+      IsConvertCSV = setting.IsConvert;
+      isConvertText.text = "IsConvert : "+IsConvertCSV.ToString();
+      personName = setting.TestPersonName;
+      personNameText.text = "Person : " +personName;
+      animationName = setting.TestAnimation;
+      animationText.text = "Animation : " +animationName;
+      isJsonLoad = true;
+   }
+   
    public void ExportTxt()
    {
       var fileName = personName + "_" + animationName + "_" + date;
@@ -40,8 +78,9 @@ public class Write : MonoBehaviour
       
       streamWriter.Close();
       fileStream.Close();
+      ExportText.text = fileName;
+      isExportText.text = "TRUE";
    }
-   
    private void ConvertCSV()
    {
       Debug.Log("Convert Start");
@@ -55,7 +94,7 @@ public class Write : MonoBehaviour
       var dataList = new List<string[]>();
       for (var i = 0; i < splitStr.Length; i+=8)
       {
-         var array = new string[8];
+         var array = new string[9];
          array[0] = splitStr[i];
          array[1] = splitStr[i + 1];
          array[2] = splitStr[i + 2];
@@ -64,7 +103,27 @@ public class Write : MonoBehaviour
          array[5] = splitStr[i + 5];
          array[6] = splitStr[i + 6];
          array[7] = splitStr[i + 7];
-            
+
+         if (i == 0)
+         {
+            array[8] = "Velocity";
+         }
+         else
+         {
+            float x, y, z;
+            float x1, y1, z1;
+            float.TryParse(splitStr[i], out x);
+            float.TryParse(splitStr[i + 1], out y);
+            float.TryParse(splitStr[i + 2], out z);
+            float.TryParse(splitStr[i - 8], out x1);
+            float.TryParse(splitStr[i + 1 - 8], out y1);
+            float.TryParse(splitStr[i + 2 - 8], out z1);
+
+            var q = Quaternion.Euler(new Vector3(x, y, z));
+            var q1 = Quaternion.Euler(new Vector3(x1, y1, z1));
+            var velocity = Visualize.CalAllVelocity(q, q1, 0.1f);
+            array[8] = velocity.ToString();
+         }
          dataList.Add(array);
       }
         

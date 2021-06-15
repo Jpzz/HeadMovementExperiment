@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &160474002 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1617812334510158167, guid: e6663333207a5f3458f8f083a5bf6bae,
-    type: 3}
-  m_PrefabInstance: {fileID: 407832368}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &407832368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -816,7 +810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1277531766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,13 +932,9 @@ MonoBehaviour:
   - {fileID: 6188192937968729122, guid: 34acd96b0ca9e9941ad45dd69be1053f, type: 3}
   markPrefabs: {fileID: 6927185375938556390, guid: 0954ef3b5a2824d4791758876cb0b41f,
     type: 3}
+  circleMarkPrefabs: {fileID: 0}
   heatPrefabs: {fileID: 8506639353450491279, guid: 2d56d2f28b0fb734e801c5828a185498,
     type: 3}
-  linePrefabs: {fileID: 160474002}
-  mapPlanePrefabs: {fileID: 5391731134106014956, guid: 065f5649ccb1a7f42b0989a4037d6325,
-    type: 3}
-  mapWidth: 30
-  raycastSphere: {fileID: 955993426}
 --- !u!23 &1334295239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1209,7 +1199,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 35.53
+  orthographic size: 60
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

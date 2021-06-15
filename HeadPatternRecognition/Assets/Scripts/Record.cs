@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,7 +28,6 @@ public class Record : MonoBehaviour
         if (isStartExperiment && !isExport)
         {
             isEvent = true;
-            Debug.Log("AAAAA : " + System.DateTime.Now.Second  + " , " +System.DateTime.Now.Millisecond);
         }
     }
 
@@ -114,7 +114,7 @@ public class Record : MonoBehaviour
     [Header("Head Data")] public List<float[]> dataSet = new List<float[]>();
 
     public string[] tags;
-
+    
     //-------------------------------------------------------------------------------------------------
 
     #endregion
@@ -128,6 +128,7 @@ public class Record : MonoBehaviour
     [SerializeField] private bool isTransition;
 
     [SerializeField] private bool isExport;
+
 
 
     //-------------------------------------------------------------------------------------------------
@@ -158,6 +159,7 @@ public class Record : MonoBehaviour
 
     #region Setting
 
+   
     private void Initialize()
     {
         stateText.text = "STATE IDLE";
