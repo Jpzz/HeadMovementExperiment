@@ -112,6 +112,7 @@ public class Write : MonoBehaviour
          {
             float x, y, z;
             float x1, y1, z1;
+            
             float.TryParse(splitStr[i], out x);
             float.TryParse(splitStr[i + 1], out y);
             float.TryParse(splitStr[i + 2], out z);
@@ -119,8 +120,47 @@ public class Write : MonoBehaviour
             float.TryParse(splitStr[i + 1 - 8], out y1);
             float.TryParse(splitStr[i + 2 - 8], out z1);
 
-            var q = Quaternion.Euler(new Vector3(x, y, z));
-            var q1 = Quaternion.Euler(new Vector3(x1, y1, z1));
+            float newX = new float();
+            float newY = new float();
+            float newZ = new float();
+            float newX1 = new float();
+            float newY1 = new float();
+            float newZ1 = new float();
+            
+            if (x > 360f)
+               newX = x - 360f;
+            else if (x < 0)
+            {
+               newX = 360 + (x%360);
+            }
+            
+            if (y > 360f)
+               newY = y - 360f;
+            else if (y < 0)
+               newY = 360 + (y%360);
+            
+            if (z > 360f)
+               newZ = z - 360f;
+            else if (z < 0)
+               newZ = 360 + (z%360);
+            
+            if (x1 > 360f)
+               newX1 = x1 - 360f;
+            else if (x1 < 0)
+               newX1 = 360 + (x1%360);
+            
+            if (y1 > 360f)
+               newY1 = y1 - 360f;
+            else if (y1 < 0)
+               newY1 = 360 + (y1%360);
+            
+            if (z1 > 360f)
+               newZ1 = z1 - 360f;
+            else if (z1 < 0)
+               newZ1 = 360 + (z1%360);
+            
+            var q = Quaternion.Euler(new Vector3(newX, newY, newZ));
+            var q1 = Quaternion.Euler(new Vector3(newX1, newY1, newZ1));
             var velocity = Visualize.CalAllVelocity(q, q1, 0.1f);
             array[8] = velocity.ToString();
          }

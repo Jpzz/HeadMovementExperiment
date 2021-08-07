@@ -83,6 +83,8 @@ public class Visualize : MonoBehaviour
                 /// Degree 계산
                 if (degree >= 360)
                     degree = 0;
+                else if (degree < 0)
+                    degree = 360 + degree;
                 
                 ///Degree에 따른 Radian 계산
                 var radian = degree * Mathf.PI / 180;
